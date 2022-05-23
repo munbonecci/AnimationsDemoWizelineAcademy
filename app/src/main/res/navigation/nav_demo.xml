@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_demo"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.wizeline.academy.animations.ui.splash_screen.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment">
+        <action
+            android:id="@+id/toMainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.wizeline.academy.animations.ui.home.HomeFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/toDetailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.wizeline.academy.animations.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="imageId"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/toMoreDetailsFragment"
+            app:destination="@id/moreDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moreDetailsFragment"
+        android:name="com.wizeline.academy.animations.ui.more_details.MoreDetailsFragment"
+        android:label="MoreDetailsFragment"
+        tools:layout="@layout/more_details_fragment">
+        <argument
+            android:name="imageId"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="contentIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>

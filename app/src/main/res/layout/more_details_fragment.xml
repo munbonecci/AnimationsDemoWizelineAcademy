@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:transitionName="detail_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Proin consectetur ante vel ex pulvinar, eu hendrerit enim tristique." />
+
+    <ImageView
+        android:id="@+id/ivImageDetailLarge"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sample_img"
+        android:transitionName="detail_image"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvFullTextContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:transitionName="detail_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImageDetailLarge"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere velit
+        vitae lorem scelerisque, et elementum elit lacinia. In blandit quam sit amet malesuada varius.
+        Quisque posuere lacus ut ante imperdiet, et egestas ante pharetra. Vivamus a ipsum eros.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Phasellus ac nisi libero. Phasellus euismod eros dignissim ultricies vestibulum.
+        Duis vitae luctus arcu, at sollicitudin justo. Aenean gravida mattis tortor, laoreet viverra neque ultrices nec.
+        Nulla facilisi. Nam luctus aliquet eleifend. Nullam vel scelerisque quam, quis lacinia risus.
+        Pellentesque gravida ac sapien id facilisis. Aliquam erat volutpat.
+        Quisque accumsan neque eu ligula ultricies, ac eleifend mi volutpat. Curabitur et turpis eu urna imperdiet placerat." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
